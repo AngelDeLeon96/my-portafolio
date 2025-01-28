@@ -1,0 +1,39 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro';  
+import Slideshow from '../components/Slideshow.astro';
+import Bento from '../components/Bento.astro';
+import PersonalInfo from '../components/PersonalInfo.astro';
+import Referencias from '../components/Referencias.astro';
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+
+	<div class="container bg-gray-50">
+			<section class="personal">
+				<PersonalInfo/>
+			</section>
+			
+			<section class="flex items-center cargos">
+				<Card cargo="Desarrollador Web"  fecha_inicio="06/07/2020" fecha_final="15/08/2023" />
+				<Card cargo="Analista Programador de Sistemas"  fecha_inicio="16/08/2023" fecha_final="31/12/2024" />
+			</section>
+
+			<section class="referencias">
+				<Referencias/>
+			</section>
+			
+		</div>
+		
+	<style>
+		.container{
+			margin: 0 auto;
+		}
+		.parallax {
+			background-attachment: fixed;
+		}
+	</style>
+</Layout>

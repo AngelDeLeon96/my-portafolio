@@ -1,0 +1,68 @@
+---
+const { empresa } = Astro.props;
+console.log("emprsa", empresa);
+
+const funciones = {
+  fge: [
+    "Configuración de servidores web (LAMP) y servidores Linux",
+    "Desarrollo de sitios con WordPress",
+    "Desarrollo de apps con Node.js y Python",
+    "Desarrollo de aplicaciones en PowerApps",
+    "Administración de bases de datos",
+    "Soporte técnico y redacción de manuales",
+    "Desarrollo de chatbots con Microsoft Copilot Studio",
+    "Desarrollo y administración de dashboards en Power BI y Metabase",
+    "Diseño de interfaces usando Figma",
+    "Implementación y migración de GLPI 9 & 10",
+    "Implementación de un CRM (osTicket) personalizado",
+    `Desarrollo y despliegue de bots para WhatsApp con JS/TS`,
+    "Implementación de un CRM (Chatwoot) para asistencia",
+    "Despliegue de aplicaciones utilizando Docker",
+  ],
+  utp: [
+    "Desarrollador web utilizando el framework Flask (Python) y framework de VUEJS",
+    "Configuración de servidores web (LAMP)",
+    "Desarrollador de sitios utilizando los CMS WordPress y Drupal",
+    "Desarrollador de aplicaciones utilizando el lenguaje PHP, Python",
+    "Administrador de Base de datos (MySQL, MariaDB)",
+    "Soporte técnico y redacción de manuales",
+    "Migración del sitio principal del UTP",
+    "Desarrollo de Aplicaciones móviles utilizando react-native",
+  ],
+};
+---
+
+<div class="card card-xl">
+  <h2 class="text-2xl font-bold color-principal">Mis Funciones</h2>
+  <p class="text-sm color-principal font-semibold mb-4">
+    Desarrollo & Administración {empresa}
+  </p>
+  <p class="color-principal mb-4">
+    Aquí están algunas de mis habilidades y funciones principales dentro del
+    desarrollo, administración y despliegue de aplicaciones y sistemas.
+  </p>
+  <h3 class="text-lg font-semibold text-gray-800 mb-2">Competencias</h3>
+  <div class="flex flex-wrap gap-2">
+    {
+      funciones[empresa].map((funcion: Function) => (
+        <span class="funciones-span text-white text-sm font-medium px-3 py-1 rounded-md">
+          {funcion}
+        </span>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .card {
+    margin: auto;
+    background-color: #232946;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    color: #141417;
+  }
+  .funciones-span {
+    background: #b8c1ec;
+    color: #232946;
+  }
+</style>

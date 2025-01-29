@@ -1,0 +1,51 @@
+---
+import { differenceInDays, format } from "date-fns";
+const { cargo, tiempo, fecha_inicio, fecha_final, empresa } = Astro.props;
+
+const calcularTiempo = (fechaInicio: Date, fechaFinal: Date) => {
+  try {
+    const dias = differenceInDays(new Date(fechaFinal), new Date(fechaInicio));
+    const años = Math.floor(dias / 365);
+    const meses = Math.floor((dias % 365) / 30);
+
+    if (años > 0 && meses > 0) {
+      return `${años} año${años > 1 ? "s" : ""} y ${meses} mes${meses > 1 ? "es" : ""}`;
+    } else if (años > 0) {
+      return `${años} año${años > 1 ? "s" : ""}`;
+    } else if (meses > 0) {
+      return `${meses} mes${meses > 1 ? "es" : ""}`;
+    } else {
+      return `${dias} día${dias > 1 ? "s" : ""}`;
+    }
+  } catch (error) {
+    console.error("Error al calcular tiempo:", error);
+    return "Error en el cálculo";
+  }
+};
+
+const tiempoCalculado = calcularTiempo(fecha_inicio, fecha_final);
+---
+
+<!-- From Uiverse.io by Creatlydev -->
+<div class="card basis-auto">
+  <section class="card__hero">
+    <p class="card__job-title text-stone-900">{cargo}</p>
+    <span>{empresa}</span>
+  </section>
+
+  <footer class="card__footer">
+    <div class="card__job-summary">
+      <div class="fecha_inicio text-center">
+        Fecha de inicio: <span>{fecha_inicio} </span>
+      </div>
+      |
+      <div class="fecha_final text-center">
+        Fecha de finalización: <span>{fecha_final} </span>
+      </div>
+      |
+      <div class="tiempo text-center">
+        Tiempo: <span>{tiempoCalculado}</span>
+      </div>
+    </div>
+  </footer>
+</div>

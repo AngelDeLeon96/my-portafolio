@@ -4,9 +4,10 @@ import Funciones from "./Funciones.astro";
 import DevIcon from "devicons-astro";
 ---
 
-<section class="h-screen mx-auto text-center mt-2 mb-2">
+<section class="h-screen mx-auto text-center mt-3">
     <h2 class="mt-6 color-principal h-secondary-text">Experiencia Laboral</h2>
-    <div class="flex flex-row justify-center mt-6">
+    <!-- tecnologias -->
+    <div class="flex flex-row justify-center mt-3 mb-3">
         <DevIcon name="typescript" variant="original" size={64} />
         <DevIcon name="github" variant="plain" size={64} />
         <DevIcon name="git" variant="plain" size={64} />
@@ -33,10 +34,8 @@ import DevIcon from "devicons-astro";
         <DevIcon name="ubuntu" variant="original" size={64} />
         <DevIcon name="debian" variant="original" size={64} />
     </div>
-    <hr
-        class="my-12 w-80 mx-auto h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"
-    />
-    <div class="flex flex-row cargos mt-3">
+
+    <div class="flex flex-row cargos mt-3 mb-3">
         <Puesto
             cargo="Analista Programador de Sistemas"
             empresa="Fiscalía General Electoral"
@@ -46,10 +45,10 @@ import DevIcon from "devicons-astro";
         <hr />
         <Funciones empresa="fge" />
     </div>
-    <hr
-        class="my-12 w-80 mx-auto h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"
-    />
-    <div class="flex flex-row cargos mt-3">
+
+    <hr class="w-1/2 h-0.5 my-8 bg-gray-100/25 border-0 shadow" />
+
+    <div class="flex flex-row cargos mt-3 mb-3">
         <Funciones empresa="utp" />
         <Puesto
             cargo="Desarrollador Web"

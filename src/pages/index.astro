@@ -1,10 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Slideshow from "../components/Slideshow.astro";
 import PersonalInfo from "../components/PersonalInfo.astro";
 import Experiencia from "../components/Experiencia.astro";
-import Referencias from "../components/Referencias.astro";
-import Divider from "../components/Divider.astro";
+import Welcome from "../components/Welcome.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -12,8 +10,10 @@ import Divider from "../components/Divider.astro";
 <Layout>
 	<PersonalInfo />
 	<hr class="w-1/2 h-0.5 my-8 bg-gray-100/25 border-0 shadow" />
-
+	<Welcome />
+	<hr class="w-1/2 h-0.5 my-8 bg-gray-100/25 border-0 shadow" />
 	<Experiencia />
+	<br />
 </Layout>
 
 <style>

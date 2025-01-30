@@ -1,60 +1,42 @@
 ---
 import Puesto from "./Puesto.astro";
 import Funciones from "./Funciones.astro";
-import DevIcon from "devicons-astro";
 ---
 
-<section class="h-screen mx-auto text-center mt-3">
+<section id="experiencia" class="container mx-auto text-center mt-3">
     <h2 class="mt-6 color-principal h-secondary-text">Experiencia Laboral</h2>
-    <!-- tecnologias -->
-    <div class="flex flex-row justify-center mt-3 mb-3">
-        <DevIcon name="typescript" variant="original" size={64} />
-        <DevIcon name="github" variant="plain" size={64} />
-        <DevIcon name="git" variant="plain" size={64} />
-        <DevIcon name="mariadb" variant="original" size={64} />
-        <DevIcon name="wordpress" variant="original" size={64} />
-        <DevIcon name="nodejs" variant="original" size={64} />
-        <DevIcon name="javascript" variant="original" size={64} />
-        <DevIcon name="python" variant="original" size={64} />
-        <DevIcon name="figma" variant="original" size={64} />
-        <DevIcon name="docker" variant="original" size={64} />
-        <DevIcon name="pandas" variant="original" size={64} />
-        <DevIcon name="html5" variant="original" size={64} />
-        <DevIcon name="nginx" variant="original" size={64} />
-        <DevIcon name="apache" variant="original" size={64} />
-        <DevIcon name="anaconda" variant="original" size={64} />
-        <DevIcon name="astro" variant="original" size={64} />
-        <DevIcon name="nextjs" variant="original" size={64} />
-        <DevIcon name="react" variant="original" size={64} />
-        <DevIcon name="fastapi" variant="original" size={64} />
-        <DevIcon name="flask" variant="original" size={64} />
-        <DevIcon name="php" variant="original" size={64} />
-        <DevIcon name="angular" variant="original" size={64} />
-        <DevIcon name="drupal" variant="original" size={64} />
-        <DevIcon name="ubuntu" variant="original" size={64} />
-        <DevIcon name="debian" variant="original" size={64} />
-    </div>
 
-    <div class="flex flex-row cargos mt-3 mb-3">
+    <!-- cargo 1 -->
+    <div class="flex flex-col sm:flex-row mt-3 mb-3 ...">
         <Puesto
             cargo="Analista Programador de Sistemas"
             empresa="Fiscalía General Electoral"
             fecha_inicio="2023-08-16"
             fecha_final="2024-12-31"
         />
-        <hr />
+
         <Funciones empresa="fge" />
     </div>
 
-    <hr class="w-1/2 h-0.5 my-8 bg-gray-100/25 border-0 shadow" />
-
-    <div class="flex flex-row cargos mt-3 mb-3">
-        <Funciones empresa="utp" />
+    <!-- cargo 2 -->
+    <div class="flex flex-col sm:flex-row ...">
         <Puesto
             cargo="Desarrollador Web"
             empresa="Universidad Tecnológica de Panamá (UTP)"
             fecha_inicio="2020-06-06"
             fecha_final="2023-08-15"
         />
+        <Funciones empresa="utp" />
+    </div>
+
+    <!-- cargo 3 -->
+    <div class="flex flex-col sm:flex-row mt-3 mb-3">
+        <Puesto
+            cargo="Asistente de Desarrollo Web"
+            empresa="Universidad Tecnológica de Panamá (UTP)"
+            fecha_inicio="2019-9-16"
+            fecha_final="2020-03-1"
+        />
+        <Funciones empresa="asis" />
     </div>
 </section>

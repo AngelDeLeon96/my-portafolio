@@ -1,84 +1,75 @@
 ---
-import DevIcon from "devicons-astro";
 import ImportantTitle from "./ImportantTitle.astro";
-const tecnologias = [
-    { PHP: "2" },
-    { Python: "3" },
-    { JavaScript: "2" },
-    { TypeScript: "2" },
-    { Apache: "3" },
-    { Nginx: "3" },
-    { MySQL: "3" },
-    { MariaDB: "3" },
-    { Flask: "3" },
-    { Django: "2" },
-    { React: "1" },
-    { Astro: "3" },
-    { VueJS: "3" },
-    { Android: "2" },
-    { WordPress: "3" },
-    { Drupal: "3" },
-    { Docker: "3" },
-    { Linux: "3" },
-    { GitHub: "3" },
-    { Git: "3" },
-    { AmazonWebServices: "1" },
-    { Pandas: "3" },
-    { FastApi: "3" },
-    { Flask: "3" },
-];
-const tecnologias2 = [
-    "PHP",
-    "Python",
-    "JavaScript/TypeScript",
-    "Apache/Nginx",
-    "MySQL/MariaDB",
-    "Flask/Django",
-    "React/VueJS/Astro",
-    "React-native/Android Studio",
-    "WordPress/Drupal/Joomla",
-    "Docker/Contenedores",
-    "VM/WSL/HyperV",
-    "Linux/Windows",
-    "Web Servers",
-    "UI/UX",
-    "Reverse proxy",
-    "GitHub/Git",
-    "Google Analytics/Search Console",
-    "AWS/Google Cloud",
-    "Metabase/PowerBI",
-    "Pandas (Python)",
-    "Análisis de Datos",
-    "Automatizaciones",
-    "PowerApps/Automate/Copilot",
-    "Desarrollo de Bots de WB",
-    "FastApi/Flask",
-];
+import Nivel from "./Nivel.astro";
+const tecnologias: Object = {
+  lenguajes: {
+    PHP: "2",
+    Python: "4",
+    JavaScript: "3",
+    TypeScript: "2",
+    Java: "1",
+  },
+  herramientas: {
+    Apache: "3",
+    Nginx: "3",
+    Docker: "3",
+    GitHub: "3",
+    Git: "3",
+    PowerApps: "3",
+    PowerAutomate: "3",
+    "MS Copilot Studio": "3",
+    Figma: "3",
+    "Bots de WhatsApp": "3",
+  },
+  cloud: { AWS: "1", "Google Cloud": "2" },
+  "bases De Datos": {
+    MySQL: "3",
+    MariaDB: "3",
+    PostgreSQL: "2",
+    SQLite: "2",
+    Redis: "1",
+  },
+  frameworks: {
+    Flask: "3",
+    Django: "2",
+    React: "1",
+    Astro: "3",
+    Vue: "3",
+    Angular: "2",
+  },
+  CRM: { Chatwoot: "3", OsTicket: "3", GLPI: "3" },
+  "desarrollo móvil": { Android: "1", ReactNative: "2" },
+  CMS: { WordPress: "3", Drupal: "3", Joomla: "2" },
+  "ciencia De Datos": { Pandas: "3", NumPy: "2", TensorFlow: "1" },
+  "bussiness inteligence": { powerBI: "3", Metabase: "3" },
+  ofimatica: { Excel: "3", Word: "3", PowerPoint: "3" },
+};
 ---
 
 <section id="tecnologias" class="container">
-    <ImportantTitle title="Conocimientos y Tecnologias" />
-    <div class="text-center mx-auto mb-4">
-        <span>Niveles</span>
-        <span>1. Principiante</span>
-        <span>2. Intermedio</span>
-        <span>3. Avanzado</span>
-        <span>4. Experto</span>
-    </div>
+  <ImportantTitle title="Conocimientos y Tecnologías" />
+  <div class="text-center mx-auto mb-4">
+    <span>Niveles:</span>
+    <span>1. Principiante</span>
+    <span>2. Intermedio</span>
+    <span>3. Avanzado</span>
+    <span>4. Experto</span>
+  </div>
 
-    <div class="flex flex-wrap gap-2 justify-center">
-        {tecnologias.map((tecnologia, index) => {
-            const clave = Object.keys(tecnologia)[0];
-            const contenido = tecnologia[clave];
-            
-            return (
-                <span 
-                    key={index}  // ¡Importante para React!
-                    class="funciones-span text-white text-sm font-medium px-3 py-1 rounded-md"
-                >
-                    {clave} - Nivel: {contenido}
-                </span>
-            );
-        })}
-    </div>
+  <div class="flex flex-wrap gap-2 justify-center">
+    {
+      Object.entries(tecnologias).map(([categoria, tecnologias]) => (
+        <div key={categoria} class="w-full text-center mt-4">
+          <h2 class="text-xl">
+            {categoria.charAt(0).toUpperCase() + categoria.slice(1)}
+          </h2>
+          <div class="flex flex-wrap gap-2 justify-center mt-2">
+            {Object.entries(tecnologias).map(([tecnologia, nivel]) => (
+              <Nivel tecnologia={tecnologia} nivel={nivel} />
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
 </section>

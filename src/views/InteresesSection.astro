@@ -1,0 +1,36 @@
+---
+import ImportantTitle from "../components/ImportantTitle.astro";
+import Span from "../components/Span.astro";
+const temas = [
+    "Redes neuronales",
+    "Machine Learning",
+    "React",
+    "Node JS",
+    "IA",
+    "Ciberseguridad",
+    "Blockchains",
+    "Chatbots",
+    "Desarrollo web",
+    "Musica electrónica",
+    "Robótica",
+    "diseño de interfaces",
+    "mapeo con drones",
+    "Ciencias y física",
+    "Inflación cósmica",
+    "Criptomonedas",
+];
+---
+
+<section id="intereses" class="container mx-auto mt-3 py-8 text-center">
+    <div class="intereses">
+        <ImportantTitle title="Intereses" />
+        <div class="flex flex-wrap gap-2 justify-center mt-4">
+            {temas.map((valor) => <Span text={valor} />)}
+        </div>
+    </div>
+</section>
+<style>
+    .valores {
+        height: fit-content;
+    }
+</style>

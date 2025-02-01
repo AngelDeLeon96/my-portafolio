@@ -5,6 +5,17 @@
 		height: 100%;
 	}
 
+	.levels {
+		background: #232946;
+		border: 1px solid #b8c1ec;
+	}
+
+	.tecnologia-span,
+	.nivel-span {
+		color: #b8c1ec;
+		font-weight: 700;
+	}
+
 	.color-principal {
 		color: #b8c1ec;
 	}

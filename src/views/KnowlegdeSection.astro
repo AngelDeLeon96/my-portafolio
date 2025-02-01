@@ -1,6 +1,6 @@
 ---
-import ImportantTitle from "./ImportantTitle.astro";
-import Nivel from "./Nivel.astro";
+import ImportantTitle from "../components/ImportantTitle.astro";
+import Nivel from "../components/Nivel.astro";
 const tecnologias: Object = {
   lenguajes: {
     PHP: "2",
@@ -21,7 +21,13 @@ const tecnologias: Object = {
     Figma: "3",
     "Bots de WhatsApp": "3",
   },
-  cloud: { AWS: "1", "Google Cloud": "2" },
+  cloud: {
+    AWS: "1",
+    "Google Cloud": "2",
+    Azure: "2",
+    Vercel: "2",
+    "Self-Hosted": 4,
+  },
   "bases De Datos": {
     MySQL: "3",
     MariaDB: "3",
@@ -46,7 +52,7 @@ const tecnologias: Object = {
 };
 ---
 
-<section id="tecnologias" class="container">
+<section id="tecnologias" class="container mt-3">
   <ImportantTitle title="Conocimientos y Tecnologías" />
   <div class="text-center mx-auto mb-4">
     <span>Niveles:</span>

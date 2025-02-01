@@ -1,0 +1,27 @@
+---
+import ImportantTitle from "../components/ImportantTitle.astro";
+import Span from "../components/Span.astro";
+const valores = [
+    "Responsabilidad",
+    "Trabajo duro",
+    "Autodidacta",
+    "Seguridad",
+    "Iniciativa",
+    "Puntualidad",
+    "Disciplina",
+];
+---
+
+<section id="valores" class="container mx-auto py-8 text-center">
+    <div class="valores mb-3 mx-auto text-center">
+        <ImportantTitle title="Valores" />
+        <div class="flex flex-wrap gap-2 justify-center">
+            {valores.map((valor) => <Span text={valor} />)}
+        </div>
+    </div>
+</section>
+<style>
+    .valores {
+        height: fit-content;
+    }
+</style>

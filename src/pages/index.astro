@@ -1,12 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import PersonalInfo from "../components/PersonalInfo.astro";
-import Experiencia from "../components/Experiencia.astro";
-import Welcome from "../components/Welcome.astro";
+import PersonalInfo from "../views/PersonalSection.astro";
+import Experiencia from "../views/ExperienciaSection.astro";
+import Welcome from "../views/WelcomeSection.astro";
 import Header from "../components/Header.astro";
-import DatosAcademicos from "../components/DatosAcademicos.astro";
+import DatosAcademicos from "../views/DatosAcademicosSection.astro";
+
 import Footer from "../components/Footer.astro";
-import Knowlegde from "../components/Knowlegde.astro";
+import Knowlegde from "../views/KnowlegdeSection.astro";
+import Referencias from "../views/ReferenciasSection.astro";
+import Intereses from "../views/InteresesSection.astro";
+import Valores from "../views/ValoresSection.astro";
+import OtherInfo from "../views/OtherInfoSection.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -22,6 +27,15 @@ import Knowlegde from "../components/Knowlegde.astro";
 	<DatosAcademicos />
 	<hr class="w-1/2 h-0.5 my-8 bg-gray-100/25 border-0 shadow" />
 	<Knowlegde />
+	<hr class="w-1/2 h-0.5 my-8 bg-gray-100/25 border-0 shadow" />
+	<Valores />
+	<hr class="w-1/2 h-0.5 my-8 bg-gray-100/25 border-0 shadow" />
+	<Intereses />
+	<hr class="w-1/2 h-0.5 my-8 bg-gray-100/25 border-0 shadow" />
+	<Referencias />
+	<hr class="w-1/2 h-0.5 my-8 bg-gray-100/25 border-0 shadow" />
+	<OtherInfo />
+	<br />
 	<Footer />
 </Layout>
 

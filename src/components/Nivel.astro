@@ -2,7 +2,7 @@
 const { tecnologia, nivel } = Astro.props;
 ---
 
-<div class="">
+<div class="lv">
     <!-- Nivel -->
     <div
         href="#"
@@ -31,19 +31,9 @@ const { tecnologia, nivel } = Astro.props;
                     fill-rule="evenodd"></path>
             </svg>
             <span
-                class="inline-block tabular-nums tracking-wider font-display text-black font-bold"
+                class="inline-block tabular-nums tracking-wider font-display nivel-span font-bold"
                 >{nivel}</span
             >
         </div>
     </div>
 </div>
-
-<style>
-    .levels {
-        background-color: #b8c1ec;
-    }
-    .tecnologia-span {
-        color: #232946;
-        font-weight: 700;
-    }
-</style>

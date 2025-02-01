@@ -1,10 +1,27 @@
 ---
-
+import { Image } from "astro:assets";
 ---
 
 <header class="bg-dark w-screen h-16 fixed top-0 z-50">
-    <nav class="mx-auto flex justify-end p-6 lg:px-8" aria-label="Global">
-        <div class="lg:flex lg:gap-x-12">
+    <nav
+        class="mx-auto flex justify-between items-center p-6 lg:px-8"
+        aria-label="Global"
+    >
+        <!-- Logo o nombre del sitio -->
+        <div class="text-lg font-semibold text-white flex items-center gap-2">
+            <Image
+                src="/logo-dog.jpg"
+                width="64"
+                height="64"
+                decoding="async"
+                loading="lazy"
+                alt="Logo Portafolio"
+            />
+            <span class="color-principal">Portafolio</span>
+        </div>
+
+        <!-- Menú para pantallas grandes -->
+        <div class="lg:flex lg:gap-x-12 hidden lg:flex">
             <a href="#my-hero" class="text-sm/6 font-semibold color-principal"
                 >Sobre Mi</a
             >
@@ -28,5 +45,67 @@
                 >Intereses</a
             >
         </div>
+
+        <!-- Botón de menú hamburguesa para pantallas pequeñas -->
+        <button class="lg:hidden text-white" onclick="toggleMenu()">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+                ></path>
+            </svg>
+        </button>
     </nav>
+
+    <!-- Menú para pantallas pequeñas -->
+    <div
+        id="mobileMenu"
+        class="lg:hidden hidden bg-dark w-full fixed top-16 left-0 z-40"
+    >
+        <div class="flex flex-col p-6 space-y-4">
+            <a href="#my-hero" class="text-sm/6 font-semibold color-principal"
+                >Sobre Mi</a
+            >
+            <a
+                href="#experiencia"
+                class="text-sm/6 font-semibold color-principal">Experiencia</a
+            >
+            <a
+                href="#academicos"
+                class="text-sm/6 font-semibold color-principal"
+                >Datos Académicos</a
+            >
+            <a
+                href="#tecnologias"
+                class="text-sm/6 font-semibold color-principal">Conocimientos</a
+            >
+            <a href="#valores" class="text-sm/6 font-semibold color-principal"
+                >Valores</a
+            >
+            <a href="#intereses" class="text-sm/6 font-semibold color-principal"
+                >Intereses</a
+            >
+        </div>
+    </div>
 </header>
+<style>
+    img {
+        border-radius: 50px;
+        object-fit: contain;
+    }
+</style>
+<!-- Script en línea con is:inline -->
+<script is:inline>
+    function toggleMenu() {
+        const mobileMenu = document.getElementById("mobileMenu");
+        mobileMenu.classList.toggle("hidden");
+    }
+</script>

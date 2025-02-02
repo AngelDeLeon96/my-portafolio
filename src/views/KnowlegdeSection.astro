@@ -52,9 +52,9 @@ const tecnologias: Object = {
 };
 ---
 
-<section id="tecnologias" class="container mt-3">
+<section id="tecnologias" class="mx-auto mt-3">
   <ImportantTitle title="Conocimientos y Tecnologías" />
-  <div class="text-center mx-auto mb-4">
+  <div class="text-center color-principal mx-auto mb-4">
     <span>Niveles:</span>
     <span>1. Principiante</span>
     <span>2. Intermedio</span>
@@ -66,7 +66,7 @@ const tecnologias: Object = {
     {
       Object.entries(tecnologias).map(([categoria, tecnologias]) => (
         <div key={categoria} class="w-full text-center mt-4">
-          <h2 class="text-xl">
+          <h2 class="text-xl color-principal">
             {categoria.charAt(0).toUpperCase() + categoria.slice(1)}
           </h2>
           <div class="flex flex-wrap gap-2 justify-center mt-2">

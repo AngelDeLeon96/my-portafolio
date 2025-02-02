@@ -5,6 +5,10 @@
 		height: 100%;
 	}
 
+	.bg-dark2 {
+		background-color: #232946;
+	}
+
 	.levels {
 		background: #232946;
 		border: 1px solid #b8c1ec;
@@ -49,6 +53,28 @@
 		font-size: 200px;
 		color: rgb(255, 255, 255, 0.9);
 		line-height: 1;
+	}
+
+	@keyframes fadeOut {
+		0% {
+			opacity: 1;
+		}
+
+		100% {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	.loader-container {
+		position: fixed;
+		inset: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: white;
+		z-index: 50;
+		animation: fadeOut 1s ease-out 2s forwards;
 	}
 
 	#background {

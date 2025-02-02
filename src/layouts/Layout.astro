@@ -7,27 +7,25 @@ import Header from "../components/Header.astro";
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/logo-lobo.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Portfolio</title>
 	</head>
 
-	<body class="min-h-screen">
+	<body class="min-h-screen w-full overflow-x-hidden">
 		<!-- Contenedor principal con el fondo parallax -->
-
 		<div
-			class="fixed top-0 left-0 w-full h-full bg-[url('/back.webp')] bg-cover bg-center bg-fixed z-[-1]"
+			class="fixed top-0 left-0 w-screen h-full bg-[url('/logo.jpg')] bg-cover bg-center md:bg-fixed z-[-1]"
 		>
 		</div>
 
 		<!-- Capa oscura -->
-		<div class="fixed top-0 left-0 w-full h-full bg-black/90 z-[-1]"></div>
+		<div class="fixed top-0 left-0 w-full min-h-screen bg-black/90 z-[-1]">
+		</div>
 
 		<!-- Contenido de la página -->
-		<div
-			class="relative z-10 flex flex-col items-center justify-center min-h-screen text-white w-full max-w-3xl px-4 mx-auto sm:px-6 md:px-8 lg:max-w-5xl"
-		>
+		<div class="mx-auto w-full text-center mx-auto">
 			<slot />
 		</div>
 	</body>

@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import ImportantTitle from "../components/ImportantTitle.astro";
 ---
 
-<section id="referencias" class="container">
+<section id="referencias" class="mx-auto text-center mt-3">
   <ImportantTitle title="Referencias" />
   <Image
     src="/referencia.webp"
@@ -14,3 +14,9 @@ import ImportantTitle from "../components/ImportantTitle.astro";
     alt="Referencias"
   />
 </section>
+<style>
+  img {
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+</style>

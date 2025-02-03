@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import ImportantTitle from "../components/ImportantTitle.astro";
 ---
 
@@ -7,12 +8,13 @@ import ImportantTitle from "../components/ImportantTitle.astro";
     <div id="hero" class="mx-auto text-center mt-3">
         <div class="academic-log text-center mx-auto">
             <a href="https://utp.ac.pa/">
-                <img
-                    class="mx-auto logo"
+                <Image
                     src="https://utp.ac.pa/logo_utp.jpg"
-                    alt=""
                     width="100"
                     height="100"
+                    decoding="async"
+                    loading="lazy"
+                    alt="Logo Portafolio"
                 />
             </a>
             <p class="text-white">Universidad Tecnológica de Panamá</p>

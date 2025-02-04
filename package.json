@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-tw_amgel_k",
+  "name": "portfolio-tw_angel_k",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -11,12 +11,13 @@
   "dependencies": {
     "@astrojs/react": "^4.2.0",
     "@astrojs/tailwind": "^5.1.5",
+    "@tailwindcss/vite": "^4.0.3",
     "@types/react-dom": "^19.0.3",
-    "astro": "^5.1.9",
+    "astro": "^5.2.3",
     "date-fns": "^4.1.0",
     "devicons-astro": "^0.4.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^4.0.3"
   }
 }

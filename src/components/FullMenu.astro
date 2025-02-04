@@ -14,7 +14,7 @@ import { Image } from "astro:assets";
                 width="64"
                 height="64"
                 decoding="async"
-                loading="lazy"
+                loading="eager"
                 alt="Logo Portafolio"
             />
         </div>
@@ -44,12 +44,21 @@ import { Image } from "astro:assets";
 <nav id="fullscreen-menu" class="fullscreen-menu z-10" onclick="closeMenu()">
     <div>
         <ul class="menu">
-            <li><a href="#my-hero">Sobre Mi</a></li>
-            <li><a href="#experiencia">Experiencia</a></li>
-            <li><a href="#academicos">Datos Académicos</a></li>
-            <li><a href="#tecnologias">Conocimientos</a></li>
-            <li><a href="#valores">Valores</a></li>
-            <li><a href="#tecnologias">Intereses</a></li>
+            <li><a aria-label="Sobre mi" href="#my-hero">Sobre Mi</a></li>
+            <li>
+                <a aria-label="Experiencia" href="#experiencia">Experiencia</a>
+            </li>
+            <li>
+                <a aria-label="Datos academicos " href="#academicos"
+                    >Datos Académicos</a
+                >
+            </li>
+            <li>
+                <a aria-label="Conocimientos" href="#tecnologias"
+                    >Conocimientos</a>
+            </li>
+            <li><a aria-label="Valores" href="#valores">Valores</a></li>
+            <li><a aria-label="Intereses" href="#tecnologias">Intereses</a></li>
         </ul>
     </div>
 </nav>

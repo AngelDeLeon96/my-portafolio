@@ -1,5 +1,8 @@
 ---
+import Footer from "../components/Footer.astro";
+import FullMenu from "../components/FullMenu.astro";
 import "../styles/global.css";
+import "animate.css";
 ---
 
 <!doctype html>
@@ -10,22 +13,23 @@ import "../styles/global.css";
 		<link rel="icon" type="image/svg+xml" href="/logo-lobo.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Portfolio</title>
+		<script is:inline>
+			if (
+				localStorage.theme === "dark" ||
+				(!("theme" in localStorage) &&
+					window.matchMedia("(prefers-color-scheme: dark)").matches)
+			) {
+				document.documentElement.classList.add("dark");
+			} else {
+				document.documentElement.classList.remove("dark");
+			}
+		</script>
 	</head>
-
-	<body class="min-h-screen w-full overflow-x-hidden">
-		<!-- Contenedor principal con el fondo parallax -->
-		<div
-			class="fixed top-0 left-0 w-screen h-full bg-[url('/logo.jpg')] bg-cover bg-center md:bg-fixed z-[-1]"
-		>
-		</div>
-
-		<!-- Capa oscura -->
-		<div class="fixed top-0 left-0 w-full min-h-screen bg-black/90 z-[-1]">
-		</div>
-
-		<!-- Contenido de la página -->
-		<div class="mx-auto w-full text-center mx-auto">
-			<slot />
-		</div>
+	<body
+		class="min-h-screen bg-white text-black transition-colors duration-300 dark:bg-gray-900 dark:text-white"
+	>
+		<FullMenu />
+		<slot />
+		<Footer />
 	</body>
 </html>

@@ -26,23 +26,25 @@ const calcularTiempo = (fechaInicio: Date, fechaFinal: Date) => {
 const tiempoCalculado = calcularTiempo(fecha_inicio, fecha_final);
 ---
 
-<div class="card mx-auto mt-3 mb-3 sm:me-3">
-  <section class="card__hero">
-    <p class="card__job-title text-stone-900">{cargo}</p>
-    <span>{empresa}</span>
+<div
+  class="card bg-light mx-auto mt-3 mb-3 sm:me-3 dark:text-white dark:bg-black"
+>
+  <section class="card__hero bg-white text-black dark:text-black dark:bg-black">
+    <p class="card__job-title dark:text-white">{cargo}</p>
+    <span class="dark:text-white">{empresa}</span>
   </section>
 
-  <footer class="card__footer">
-    <div class="card__job-summary">
-      <div class="fecha_inicio text-center">
+  <footer class="card__footer text-black dark:text-white">
+    <div class="card__job-summary dark:text-white">
+      <div class="fecha_inicio text-center text-black dark:text-black">
         Fecha de inicio: <span>{fecha_inicio} </span>
       </div>
       |
-      <div class="fecha_final text-center">
+      <div class="fecha_final text-center dark:text-black">
         Fecha de finalización: <span>{fecha_final} </span>
       </div>
       |
-      <div class="tiempo text-center">
+      <div class="tiempo text-center dark:text-black">
         Tiempo: <span>{tiempoCalculado}</span>
       </div>
     </div>

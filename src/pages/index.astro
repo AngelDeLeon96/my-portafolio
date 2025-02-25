@@ -3,59 +3,58 @@ import Layout from "../layouts/Layout.astro";
 import PersonalInfo from "../views/PersonalSection.astro";
 import Experiencia from "../views/ExperienciaSection.astro";
 import Welcome from "../views/WelcomeSection.astro";
-import Header from "../components/Header.astro";
 import DatosAcademicos from "../views/DatosAcademicosSection.astro";
-
-import Footer from "../components/Footer.astro";
 import Knowlegde from "../views/KnowlegdeSection.astro";
 import Referencias from "../views/ReferenciasSection.astro";
 import Intereses from "../views/InteresesSection.astro";
 import Valores from "../views/ValoresSection.astro";
 import OtherInfo from "../views/OtherInfoSection.astro";
-import FullMenu from "../components/FullMenu.astro";
+import AnimateOnScroll from "../components/AnimateOnScroll.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<FullMenu />
 	<div class="container-xl mx-auto px-4">
-		<PersonalInfo />
+		<AnimateOnScroll an="fade-right">
+			<PersonalInfo />
+		</AnimateOnScroll>
 		<hr class="w-1/2 h-0.5 my-8 bg-gray-100/25 border-0 shadow m-auto" />
-		<Welcome />
+
+		<AnimateOnScroll an="slide">
+			<Welcome />
+		</AnimateOnScroll>
 		<hr class="w-1/2 h-0.5 my-8 bg-gray-100/25 border-0 shadow m-auto" />
-		<Experiencia />
+
+		<AnimateOnScroll>
+			<Experiencia />
+		</AnimateOnScroll>
 		<hr class="w-1/2 h-0.5 my-8 bg-gray-100/25 border-0 shadow m-auto" />
-		<DatosAcademicos />
+
+		<AnimateOnScroll>
+			<DatosAcademicos />
+		</AnimateOnScroll>
 		<hr class="w-1/2 h-0.5 my-8 bg-gray-100/25 border-0 shadow m-auto" />
-		<Knowlegde />
+
+		<AnimateOnScroll>
+			<Knowlegde />
+		</AnimateOnScroll>
 		<hr class="w-1/2 h-0.5 my-8 bg-gray-100/25 border-0 shadow m-auto" />
-		<Valores />
+		<AnimateOnScroll>
+			<Valores />
+		</AnimateOnScroll>
 		<hr class="w-1/2 h-0.5 my-8 bg-gray-100/25 border-0 shadow m-auto" />
-		<Intereses />
+
+		<AnimateOnScroll>
+			<Intereses />
+		</AnimateOnScroll>
 		<hr class="w-1/2 h-0.5 my-8 bg-gray-100/25 border-0 shadow m-auto" />
-		<Referencias />
+
+		<AnimateOnScroll>
+			<Referencias />
+		</AnimateOnScroll>
 		<hr class="w-1/2 h-0.5 my-8 bg-gray-100/25 border-0 shadow m-auto" />
+
 		<OtherInfo />
 	</div>
-	<Footer />
 </Layout>
-
-<style>
-	.container {
-		margin: 0 auto;
-	}
-	.parallax {
-		/* The image used */
-		background-image: url("/public/back.webp");
-
-		/* Set a specific height */
-		min-height: 100%;
-
-		/* Create the parallax scrolling effect */
-		background-attachment: fixed;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-</style>

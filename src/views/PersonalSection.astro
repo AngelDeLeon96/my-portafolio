@@ -2,34 +2,40 @@
 import ImportantTitle from "../components/ImportantTitle.astro";
 ---
 
-<section class="h-screen flex flex-col items-end justify-center mx-auto">
+<section
+  class="h-screen flex flex-col items-end justify-center mx-auto text-dark dark:text-white"
+>
   <ImportantTitle title="Portfolio" />
-  <h1
-    class="text-center text-white transition delay-150 duration-300 ease-in-out hover:-translate-y-1 text-9xl md:text-10xl lg:text-11xl xl:text-12xl"
-  >
+  <h1 class="mt-3 text-center text-9xl md:text-10xl lg:text-11xl xl:text-12xl">
     Angel De León
   </h1>
 
-  <h3 class="mt-6 text-lg/8 color-principal text-4xl text-center">
+  <h3 class="mt-3 text-lg/8 text-4xl text-center">
     Ingeniero en Sistemas y Computacion
   </h3>
-  <a href="/HV - Angel De León.pdf">
-    <h5 class="flex flex-row color-principal">
-      Hoja de vida
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="white"
-        class="size-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M7.5 7.5h-.75A2.25 2.25 0 0 0 4.5 9.75v7.5a2.25 2.25 0 0 0 2.25 2.25h7.5a2.25 2.25 0 0 0 2.25-2.25v-7.5a2.25 2.25 0 0 0-2.25-2.25h-.75m-6 3.75 3 3m0 0 3-3m-3 3V1.5m6 9h.75a2.25 2.25 0 0 1 2.25 2.25v7.5a2.25 2.25 0 0 1-2.25 2.25h-7.5a2.25 2.25 0 0 1-2.25-2.25v-.75"
-        ></path>
-      </svg>
-    </h5></a
+  <span
+    class="mt-3 relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-pink-500"
   >
+    <span class="relative text-white dark:text-gray-950">
+      <a href="/HV - Angel De León.pdf">
+        <h5 class="flex flex-row dark:text-white">
+          Hoja de vida
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="white"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M7.5 7.5h-.75A2.25 2.25 0 0 0 4.5 9.75v7.5a2.25 2.25 0 0 0 2.25 2.25h7.5a2.25 2.25 0 0 0 2.25-2.25v-7.5a2.25 2.25 0 0 0-2.25-2.25h-.75m-6 3.75 3 3m0 0 3-3m-3 3V1.5m6 9h.75a2.25 2.25 0 0 1 2.25 2.25v7.5a2.25 2.25 0 0 1-2.25 2.25h-7.5a2.25 2.25 0 0 1-2.25-2.25v-.75"
+            ></path>
+          </svg>
+        </h5>
+      </a></span
+    >
+  </span>
 </section>

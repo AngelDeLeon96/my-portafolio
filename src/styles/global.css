@@ -26,6 +26,16 @@ body {
     height: 100%;
 }
 
+.patron-complejo {
+    background-color: #ffffff;
+    background-image:
+        radial-gradient(circle at 100% 150%, #f4f4f4 24%, #fbfbfb 24%, #fbfbfb 28%, #f4f4f4 28%, #f4f4f4 36%, #fbfbfb 36%, #fbfbfb 40%, transparent 40%, transparent),
+        radial-gradient(circle at 0 150%, #f4f4f4 24%, #fbfbfb 24%, #fbfbfb 28%, #f4f4f4 28%, #f4f4f4 36%, #fbfbfb 36%, #fbfbfb 40%, transparent 40%, transparent),
+        radial-gradient(circle at 50% 100%, #fbfbfb 10%, #f4f4f4 10%, #f4f4f4 23%, #fbfbfb 23%, #fbfbfb 30%, #f4f4f4 30%, #f4f4f4 43%, #fbfbfb 43%, #fbfbfb 50%, #f4f4f4 50%, #f4f4f4 63%, #fbfbfb 63%, #fbfbfb 71%, transparent 71%, transparent),
+        radial-gradient(circle at 100% 50%, #fbfbfb 5%, #f4f4f4 5%, #f4f4f4 15%, #fbfbfb 15%, #fbfbfb 20%, #f4f4f4 20%, #f4f4f4 29%, #fbfbfb 29%, #fbfbfb 34%, #f4f4f4 34%, #f4f4f4 44%, #fbfbfb 44%, #fbfbfb 49%, transparent 49%, transparent),
+        radial-gradient(circle at 0 50%, #fbfbfb 5%, #f4f4f4 5%, #f4f4f4 15%, #fbfbfb 15%, #fbfbfb 20%, #f4f4f4 20%, #f4f4f4 29%, #fbfbfb 29%, #fbfbfb 34%, #f4f4f4 34%, #f4f4f4 44%, #fbfbfb 44%, #fbfbfb 49%, transparent 49%, transparent);
+    background-size: 100px 50px;
+}
 
 .color-principal {
     color: #b8c1ec;

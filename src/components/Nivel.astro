@@ -4,11 +4,13 @@ const { tecnologia, nivel } = Astro.props;
 
 <div class="lv">
     <!-- Nivel -->
-    <div class="flex overflow-hidden bg-white-900 rounded-lg group px-4 py-4">
-        <div class="flex items-center">
-            <span class="ml-1 font-bold text-black">{tecnologia}</span>
+    <div
+        class="flex flex-col overflow-hidden bg-white-900 rounded-lg group px-4 py-4"
+    >
+        <div class="flex items-center justify-center">
+            <span class="font-bold text-black">{tecnologia}</span>
         </div>
-        <div class="ml-2 flex items-center gap-1 text-sm md:flex">
+        <div class="flex items-center justify-center text-sm md:flex">
             {
                 Array.from({ length: nivel }).map((_, index) => (
                     <svg

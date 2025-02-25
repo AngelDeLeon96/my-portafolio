@@ -1,6 +1,5 @@
 ---
 const { empresa } = Astro.props;
-import Span from "./Span.astro";
 const funciones = {
   fge: [
     "Configuración de servidores web (LAMP) y servidores Linux",
@@ -37,12 +36,14 @@ const funciones = {
 };
 ---
 
-<div class="card card-xl mx-auto md:mt-3 md:mb-3">
-  <h2 class="text-2xl font-bold color-principal">Mis Funciones</h2>
-  <p class="text-sm color-principal font-semibold mb-4">
-    Desarrollo & Administración {empresa}
+<div
+  class="card card-xl mx-auto md:mt-3 md:mb-3 text-black dark:text-white dark:bg-card-dark"
+>
+  <h2 class="text-2xl font-bold text-black dark:text-black">Mis Funciones</h2>
+  <p class="text-sm font-semibold mb-4 dark:text-black">
+    Desarrollo & Administración
   </p>
-  <p class="color-principal mb-4">
+  <p class="mb-4 dark:text-black">
     Aquí están algunas de mis habilidades y funciones principales dentro del
     desarrollo, administración y despliegue de aplicaciones y sistemas.
   </p>
@@ -50,7 +51,7 @@ const funciones = {
   <div class="flex flex-wrap gap-2">
     {
       funciones[empresa].map((funcion: Function) => (
-        <span class="funciones-span text-white text-sm font-medium px-3 py-1 rounded-md transition-all duration-300 ease-out hover:ring-2 hover:ring-black hover:ring-offset-2">
+        <span class="bg-white text-black dark:bg-black dark:text-white text-sm font-medium px-3 py-1 rounded-md transition-all duration-300 ease-out hover:ring-2 hover:ring-black hover:ring-offset-2">
           {funcion}
         </span>
       ))

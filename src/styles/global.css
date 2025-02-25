@@ -1,165 +1,168 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-white: #eff0f3;
+    --color-black: #232946;
+    --color-blue-700: #d4d8f0;
+    --color-white-900: #fffffe;
+
+    --bg-white: var(--color-white-900);
+    --bg-black: var(--color-black);
+    --bg-white-900: var(--color-white);
+
+
+    --bg-light: var(--color-white-900);
+    --bg-card-light: var(--color-white);
+
+    --bg-dark: var(--color-black);
+    --bg-card-dark: var(--color-blue-700);
+}
 
 html,
 body {
-	margin: 0;
-	width: 100%;
-	height: 100%;
+    margin: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.bg-dark2 {
-	background-color: #232946;
-}
-
-.levels {
-	background: #232946;
-	border: 1px solid #b8c1ec;
-}
-
-.tecnologia-span,
-.nivel-span {
-	color: #b8c1ec;
-	font-weight: 700;
-}
 
 .color-principal {
-	color: #b8c1ec;
+    color: #b8c1ec;
 }
 
 .h-secondary-text {
-	font-size: 70px;
+    font-size: 70px;
 }
 
 .h-secondary-text:hover {
-	transform: scale(1.1);
-	/* Aumenta el tamaño un 30% */
+    transform: scale(1.1);
+    /* Aumenta el tamaño un 30% */
 }
 
 /* From Uiverse.io by Creatlydev */
 .card {
-	width: min(300px, 100%);
-	height: fit-content;
-	background-color: #232946;
-	border-radius: 1rem;
-	padding: 0.5rem;
-	color: #141417;
+    width: min(300px, 100%);
+    height: fit-content;
+    background: var(--bg-white);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    color: #141417;
+}
+
+.dark .card {
+    background: var(--bg-card-dark);
 }
 
 .funciones-span {
-	background: #b8c1ec;
-	color: #232946;
+    background: #b8c1ec;
+    color: #232946;
 }
 
 .name {
-	cursor: pointer;
-	font-size: 200px;
-	color: rgb(255, 255, 255, 0.9);
-	line-height: 1;
+    cursor: pointer;
+    font-size: 200px;
+    color: rgb(255, 255, 255, 0.9);
+    line-height: 1;
 }
 
 @keyframes fadeOut {
-	0% {
-		opacity: 1;
-	}
+    0% {
+        opacity: 1;
+    }
 
-	100% {
-		opacity: 0;
-		visibility: hidden;
-	}
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 .loader-container {
-	position: fixed;
-	inset: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: white;
-	z-index: 50;
-	animation: fadeOut 1s ease-out 2s forwards;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    z-index: 50;
+    animation: fadeOut 1s ease-out 2s forwards;
 }
 
 #background {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-	filter: blur(100px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(100px);
 }
 
 #hero {
-	display: flex;
-	align-items: start;
-	flex-direction: column;
-	justify-content: center;
-	padding: 16px;
-	width: 70%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+    width: 70%;
 }
 
 .card-xl {
-	width: min(600px, 100%);
-	padding: 2rem;
+    width: min(600px, 100%);
+    padding: 2rem;
 }
 
-.tiempo,
-.fecha_inicio,
-.fecha_final {
-	color: white;
-	font-weight: 400;
-}
 
 .card__hero {
-	height: 250px;
-	background-color: #b8c1ec;
-	border-radius: 0.5rem 0.5rem 0 0;
-	padding: 1.5rem;
-	font-size: 0.875rem;
+    height: 250px;
+
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 1.5rem;
+    font-size: 0.875rem;
 }
 
 .card__hero .card__job-title {
-	margin: 1rem 0;
-	font-size: 2rem;
-	font-weight: 600;
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 .card__hero-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	gap: 1rem;
-	font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    font-weight: 700;
 }
 
 .card__footer {
-	display: flex;
-	align-items: center;
-	padding: 0.75rem;
-	row-gap: 1rem;
-	font-weight: 700;
-	font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    row-gap: 1rem;
+    font-weight: 700;
+    font-size: 0.875rem;
 }
 
 .card__footer p {
-	color: white;
+    color: white;
 }
 
 @media (min-width: 340px) {
-	.card__footer {
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		gap: 1rem;
-	}
+    .card__footer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
 }
 
 
 @media screen and (max-width: 768px) {
-	#hero {
-		display: block;
-		padding-top: 10%;
-	}
+    #hero {
+        display: block;
+        padding-top: 10%;
+    }
 }

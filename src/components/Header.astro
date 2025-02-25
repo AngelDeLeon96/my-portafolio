@@ -1,8 +1,9 @@
 ---
 import { Image } from "astro:assets";
+import ThemeToggle from "./ThemeToggle.astro";
 ---
 
-<header class="bg-dark w-screen h-16 fixed top-0 z-50 mb-3">
+<header class="w-screen h-16 fixed top-0 z-50 mb-3">
     <nav
         class="mx-auto flex justify-between items-center p-6 lg:px-8"
         aria-label="Global"
@@ -20,24 +21,26 @@ import { Image } from "astro:assets";
         </div>
 
         <!-- Menú para pantallas grandes -->
-
-        <!-- Botón de menú hamburguesa para pantallas pequeñas -->
-        <button class="menu text-white" onclick="toggleMenu()">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
-                ></path>
-            </svg>
-        </button>
+        <div>
+            <ThemeToggle />
+            <!-- Botón de menú hamburguesa para pantallas pequeñas -->
+            <button class="menu text-white" onclick="toggleMenu()">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+                    ></path>
+                </svg>
+            </button>
+        </div>
     </nav>
 
     <!-- Menú para pantallas pequeñas -->
@@ -45,29 +48,19 @@ import { Image } from "astro:assets";
         id="mobileMenu"
         class="hidden bg-dark2 w-full fixed left-0 z-40 ps-1 pe-1 rounded-md"
     >
-        <div class="flex flex-col p-6 space-y-4">
-            <a href="#my-hero" class="text-sm/6 font-semibold color-principal"
-                >Sobre Mi</a
+        <div class="flex flex-col p-6 space-y-4 dark:text-white">
+            <a href="#my-hero" class="text-sm/6 font-semibold">Sobre Mi</a>
+            <a href="#experiencia" class="text-sm/6 font-semibold"
+                >Experiencia</a
             >
-            <a
-                href="#experiencia"
-                class="text-sm/6 font-semibold color-principal">Experiencia</a
-            >
-            <a
-                href="#academicos"
-                class="text-sm/6 font-semibold color-principal"
+            <a href="#academicos" class="text-sm/6 font-semibold"
                 >Datos Académicos</a
             >
-            <a
-                href="#tecnologias"
-                class="text-sm/6 font-semibold color-principal">Conocimientos</a
+            <a href="#tecnologias" class="text-sm/6 font-semibold"
+                >Conocimientos</a
             >
-            <a href="#valores" class="text-sm/6 font-semibold color-principal"
-                >Valores</a
-            >
-            <a href="#intereses" class="text-sm/6 font-semibold color-principal"
-                >Intereses</a
-            >
+            <a href="#valores" class="text-sm/6 font-semibold">Valores</a>
+            <a href="#intereses" class="text-sm/6 font-semibold">Intereses</a>
         </div>
     </div>
 </header>

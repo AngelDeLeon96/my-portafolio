@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import ImportantTitle from "../components/ImportantTitle.astro";
 ---
 
-<section id="academicos" class="mx-auto text-center mt-3">
+<section id="academicos" class="mx-auto text-center mt-3 dark:text-white">
     <ImportantTitle title="Datos Academicos" />
     <div id="hero" class="mx-auto text-center mt-3">
         <div class="academic-log text-center mx-auto">
@@ -19,11 +19,13 @@ import ImportantTitle from "../components/ImportantTitle.astro";
             </a>
             <p class="text-white">Universidad Tecnológica de Panamá</p>
         </div>
-        <div class="info-academic mx-auto">
-            <p class="my-history text-xl color-principal">
+        <div class="my-history info-academic mx-auto">
+            <h3
+                class="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 text-xl"
+            >
                 Lic. en Ingeniería de Sistemas y Computación.
-            </p>
-            <span class="text-white"> 2014 - 2020 </span>
+            </h3>
+            <span class="text-black dark:text-white"> 2014 - 2020 </span>
         </div>
     </div>
 </section>
